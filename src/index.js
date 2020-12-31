@@ -1,8 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import './IndexStyles.scss'
+
+
+
+
+
+
+document.body.classList.add('black');
+// document.body.classList.add('white');
+
 
 ReactDOM.render(
   <React.StrictMode>

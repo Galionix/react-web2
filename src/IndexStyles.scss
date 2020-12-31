@@ -1,0 +1,96 @@
+$b_color: silver;
+$w_color: #383838;
+
+$b_back:#212121;
+$w_back:#ffffff;
+
+$b_back_light:#7a7a7a8a;
+$w_back_light:#9595958a;
+
+
+///////positioning
+body {
+
+    #root {
+        .App {
+
+            display: flex;
+            flex-direction: row;
+
+            width: 100%;
+
+            .chat_list {
+                flex: 1 3 0;
+
+                padding: 0;
+                flex-direction: row;
+                list-style: none;
+                width: 50%;
+
+                .chat_item {
+                    flex-direction: row;
+                    align-items: center;
+
+                    .chat_img {
+                        border-radius: 50%;
+                        width: 50px;
+                        height: 50px;
+                    }
+
+                    .chat_texts {
+                        flex-direction: column;
+                    }
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+
+            }
+
+            .chat_area {
+                flex: 3 1 0;
+            }
+        }
+    }
+}
+
+
+
+
+//////themes
+body.black {
+    background-color: $b_back;
+    color: $b_color;
+
+    .chat_list {
+
+        color: inherit;
+
+        .chat_item {
+            &:hover {
+
+                background-color: $b_back_light;
+            }
+        }
+
+    }
+
+}
+
+body.white {
+    background-color: $w_back;
+    color: $w_color;
+
+    .chat_list {
+
+        color: inherit;
+
+        .chat_item {
+            &:hover {
+
+                background-color: $w_back_light;
+            }
+        }
+    }
+}
